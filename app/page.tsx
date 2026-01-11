@@ -35,16 +35,22 @@ export default function Portfolio() {
 
                             <div className="hidden md:block">
                                 <h2 className="text-xl font-black text-slate-900 tracking-tighter leading-none uppercase">প্রভাষক মীর মাহমুদুর রহমান</h2>
-                                <p className="text-[10px] font-black text-emerald-700 tracking-[0.2em] mt-1 uppercase">বগুড়া-০৫ (শেরপুর-ধুনট)</p>
+                                <p className="text-[12px]  text-[#008d4c] mt-1 uppercase">বগুড়া-০৫ (শেরপুর-ধুনট)</p>
                             </div>
                         </div>
 
                         {/* Desktop Menu */}
-                        <div className="hidden lg:flex gap-2">
-                            <Link href="#home"><Button variant="ghost" className="rounded-lg font-semibold text-xs bg-emerald-50 text-emerald-900 transition-all px-5 h-10">হোম</Button></Link>
-                            <Link href="#about"><Button variant="ghost" className="rounded-lg font-semibold text-xs hover:bg-emerald-50 hover:text-emerald-900 transition-all px-5 h-10">পরিচিতি</Button></Link>
-                            <Link href="#education"><Button variant="ghost" className="rounded-lg font-semibold text-xs hover:bg-emerald-50 hover:text-emerald-900 transition-all px-5 h-10">শিক্ষাগত যোগ্যতা</Button></Link>
-                            <Link href="#journey"><Button variant="ghost" className="rounded-lg font-semibold text-xs hover:bg-emerald-50 hover:text-emerald-900 transition-all px-5 h-10">রাজনৈতিক পথচলা</Button></Link>
+                        <div className="hidden lg:flex gap-2 items-center">
+                            <Link href="#home"><Button variant="ghost" className="rounded-lg text-xs transition-all px-5 h-10">হোম</Button></Link>
+                            <Link href="#about"><Button variant="ghost" className="rounded-lg text-xs transition-all px-5 h-10">পরিচিতি</Button></Link>
+                            <Link href="#education"><Button variant="ghost" className="rounded-lg text-xs transition-all px-5 h-10">শিক্ষাগত যোগ্যতা</Button></Link>
+                            <Link href="#journey"><Button variant="ghost" className="rounded-lg text-xs transition-all px-5 h-10">রাজনৈতিক পথচলা</Button></Link>
+                            <Button asChild className="bg-[#008d4c] text-white hover:bg-[#066648] rounded-lg h-11 px-8 py-6 text-sm shadow-sm transition-all flex items-center gap-2">
+                                <a href="https://wa.me/8801718329508" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                    <Mail className="h-4 w-4" />
+                                    যোগাযোগ করুন
+                                </a>
+                            </Button>
                         </div>
 
                         {/* Mobile Menu Toggle */}
@@ -58,15 +64,15 @@ export default function Portfolio() {
                 </div>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`lg:hidden absolute top-full left-0 w-full bg-white transition-all duration-500 overflow-hidden shadow-2xl z-50 ${isMenuOpen ? 'max-h-[500px] border-b-4 border-emerald-900' : 'max-h-0'}`}>
+                <div className={`lg:hidden absolute top-full left-0 w-full bg-white transition-all duration-500 overflow-hidden shadow-2xl z-50 ${isMenuOpen ? 'max-h-[500px] ' : 'max-h-0'}`}>
                     <div className="container mx-auto px-4 py-8 flex flex-col gap-2">
                         <Link href="#home"><Button variant="ghost" className="w-full justify-start rounded-lg font-semibold text-sm p-4 h-12" onClick={() => setIsMenuOpen(false)}>হোম</Button></Link>
                         <Link href="#about"><Button variant="ghost" className="w-full justify-start rounded-lg font-semibold text-sm p-4 h-12" onClick={() => setIsMenuOpen(false)}>পরিচিতি</Button></Link>
                         <Link href="#education"><Button variant="ghost" className="w-full justify-start rounded-lg font-semibold text-sm p-4 h-12" onClick={() => setIsMenuOpen(false)}>শিক্ষাগত যোগ্যতা</Button></Link>
                         <Link href="#journey"><Button variant="ghost" className="w-full justify-start rounded-lg font-semibold text-sm p-4 h-12" onClick={() => setIsMenuOpen(false)}>রাজনৈতিক পথচলা</Button></Link>
                         <div className="pt-4 mt-2 border-t border-slate-100">
-                            <Button asChild className="w-full bg-emerald-600 text-white rounded-lg h-12 font-semibold text-sm shadow-sm">
-                                <a href="https://wa.me/8801718329508" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            <Button asChild className="bg-[#008d4c] text-white hover:bg-[#066648] rounded-lg h-11 px-8 py-6 text-sm shadow-sm transition-all flex items-center gap-2">
+                                <a href="https://wa.me/8801718329508" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                     <Mail className="h-4 w-4" />
                                     যোগাযোগ করুন
                                 </a>
@@ -77,32 +83,31 @@ export default function Portfolio() {
             </nav>
 
             {/* Hero Section */}
-            <section id="home" className="relative overflow-hidden bg-white pt-24 lg:pt-32">
+            <section id="home" className="relative overflow-hidden bg-white  lg:pt-20">
                 <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')" }}></div>
                 <div className="container mx-auto px-4 max-w-6xl relative z-10">
                     <div className="flex flex-col lg:flex-row items-left">
                         {/* Content Side */}
-                        <div className="flex-1 py-16 lg:py-30 pr-0 lg:pr-12 space-y-10">
+                        <div className="flex-1 py-12 lg:py-32 pr-0 lg:pr-12 space-y-10">
                             <div className="space-y-6">
-                                <div className="inline-block bg-white/60 backdrop-blur-md text-emerald-900 text-[12px] font-black uppercase  px-5 py-2 shadow-sm">
+                                <div className="inline-block bg-white/60 backdrop-blur-md text-[#008d4c] text-[12px]  px-6 rounded-lg py-2 shadow-sm">
                                     সৎ, যোগ্য ও খোদাভিরু নেতৃত্ব প্রতিষ্ঠায় শেরপুর ধুনটের মাটি ও গণমানুষের নেতা
                                 </div>
-                                <h1 className="text-5xl  font-black text-slate-900 uppercase ">
-                                    <span className="text-4xl mb-5">প্রভাষক মীর মুহাঃ </span><br />
-                                    <span className="text-emerald-700 mt-5 md:text-7xl"> মাহমুদুর রহমান চুন্নু </span>
-
+                                <h1 className="font-black text-slate-900 uppercase text-center md:text-left">
+                                    <div className="text-xl lg:text-2xl">প্রভাষক মীর মুহাঃ</div>
+                                    <span className="text-[#008d4c] text-7xl lg:text-7xl block mt-2">মাহমুদুর রহমান চুন্নু</span>
                                 </h1>
                             </div>
 
-                            <p className="text-sm md:text-base text-slate-600 max-w-sm leading-relaxed border-l-4 border-emerald-900 pl-6">
+                            <p className="text-sm md:text-base text-slate-600 max-w-sm leading-relaxed text-center md:text-left mx-auto md:mx-0">
                                 পীর সাহেব চরমোনাই মনোনীত সংসদ সদস্য পদপ্রার্থী বগুড়া-৫, শেরপুর-ধুনট নির্বাচনী এলাকা
                             </p>
-                            <div className="flex flex-row flex-wrap gap-4 pt-4">
-                                <Button className="bg-emerald-600 text-white hover:bg-emerald-700 px-5 h-11 rounded-lg text-sm font-semibold transition-all shadow-sm flex items-center gap-2">
+                            <div className="flex flex-row flex-wrap gap-4 pt-4 justify-center md:justify-start">
+                                <Button className="bg-[#008d4c] text-white hover:bg-[#066648] rounded-lg h-11 px-8 py-6 text-sm shadow-sm transition-all flex items-center gap-2">
                                     <FileText className="h-4 w-4" />
                                     বিস্তারিত পড়ুন
                                 </Button>
-                                <Button asChild className="bg-emerald-600 text-white hover:bg-emerald-700 px-5 h-11 rounded-lg text-sm font-semibold transition-all shadow-sm">
+                                <Button asChild className="bg-[#008d4c] text-white hover:bg-[#066648] rounded-lg h-11 px-8 py-6 text-sm shadow-sm transition-all flex items-center gap-2">
                                     <a href="https://wa.me/8801718329508" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                         <Mail className="h-4 w-4" />
                                         যোগাযোগ করুন
@@ -112,18 +117,18 @@ export default function Portfolio() {
                         </div>
 
                         {/* Image Side */}
-                        <div className="lg:w-[500px] relative flex items-center justify-center min-h-[500px]">
+                        <div className="lg:w-[500px] mb-20 relative flex items-center justify-center min-h-[500px]">
                             <div className="absolute inset-0 bg-emerald-50 -rotate-3 rounded-3xl"></div>
                             <div className="relative w-full h-full bg-slate-200 overflow-hidden shadow-2xl transition-all duration-700 rounded-3xl">
-                                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/20 to-transparent z-10"></div>
+
                                 <img
-                                    src="https://i.postimg.cc/jq90gdpW/pic.png"
+                                    src="https://i.ibb.co.com/N20pvNRK/Chunnu-Picture.png"
                                     alt="MP Candidate"
-                                    className="w-full h-full object-cover grayscale-100 brightness-110 hover:grayscale-0 transition-all duration-700"
+                                    className="w-full h-full object-cover transition-all duration-700"
                                 />
                             </div>
-                            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-white/80 backdrop-blur-md p-6 shadow-2xl  -rotate-6 hidden md:flex items-center justify-center">
-                                <img src="/h1.png" alt="হাতপাখা" className="w-full h-full object-contain brightness-75" />
+                            <div className="absolute -bottom-8 -left-8 w-40 h-40 backdrop-blur-md p-6 bg-[#008c4f]/20 transition-all  rounded-2xl -rotate-6 hover:-rotate-0 hidden md:flex items-center justify-center">
+                                <img src="/h1.png" alt="হাতপাখা" className="w-full h-full object-contain " />
                             </div>
                         </div>
                     </div>
@@ -140,10 +145,10 @@ export default function Portfolio() {
                             { label: "দলে যোগদান", val: "২০১০", sub: "সাল" },
                             { label: "শিক্ষা", val: "এম.কম", sub: "ব্যাবস্থাপনা" },
                         ].map((stat, i) => (
-                            <div key={i} className="bg-white/40 backdrop-blur-md p-10 flex flex-col items-center justify-center text-center group hover:-translate-y-2 transition-all duration-500">
-                                <p className="text-[12px] font-black text-emerald-800/40 uppercase mb-4">{stat.label}</p>
-                                <div className="text-5xl font-black text-emerald-950 mb-2">{stat.val}</div>
-                                <p className="text-[12px] font-black text-slate-400 uppercase">{stat.sub}</p>
+                            <div key={i} className="bg-white/40  backdrop-blur-md p-10 flex flex-col items-center justify-center text-center group hover:-translate-y-2 transition-all duration-500">
+                                <p className="text-[12px] text-[#008d4c] uppercase mb-4">{stat.label}</p>
+                                <div className="text-5xl  text-emerald-950 font-bold mb-2">{stat.val}</div>
+                                <p className="text-[12px]  text-[#008d4c]  uppercase">{stat.sub}</p>
                             </div>
                         ))}
                     </div>
@@ -156,7 +161,7 @@ export default function Portfolio() {
                     <img src="/h2.png" alt="watermark" className="w-[600px]" />
                 </div>
                 <div className="container mx-auto px-4 max-w-6xl relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch mb-20">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch ">
                         {/* Left Column - Bio & CTA */}
                         <div className="w-full lg:w-2/5 space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
                             <div className="relative w-full">
@@ -173,8 +178,7 @@ export default function Portfolio() {
 
                             <div className="pt-4">
                                 <Link href="/about">
-                                    <Button className="bg-emerald-600 text-white hover:bg-emerald-700 rounded-lg h-11 px-6 font-semibold text-sm shadow-sm transition-all flex items-center gap-2">
-                                        <FileText className="h-4 w-4" />
+                                    <Button className="bg-[#008d4c] text-white hover:bg-[#066648] rounded-lg h-11 px-8 py-6 text-sm shadow-sm transition-all flex items-center gap-2">
                                         বিস্তারিত প্রোফাইল
                                     </Button>
                                 </Link>
@@ -191,13 +195,13 @@ export default function Portfolio() {
                                     { label: "সদস্য", title: "চেম্বার অব কমার্স", sub: "বগুড়া" },
 
                                 ].map((role, i) => (
-                                    <div key={i} className={`p-10 transition-all hover:-translate-y-2 rounded-2xl shadow-xl flex flex-col items-center text-center lg:items-start lg:text-left justify-between group h-full bg-white border border-emerald-100`}>
+                                    <div key={i} className={`p-10 transition-all hover:-translate-y-2 rounded-lg  flex flex-col items-center text-center lg:items-start lg:text-left justify-between group h-full bg-white border `}>
                                         <div>
-                                            <p className="text-[10px] font-black uppercase tracking-widest mb-6 text-emerald-600">{role.label}</p>
-                                            <h3 className="text-2xl font-black leading-tight mb-2 tracking-tighter text-emerald-950">{role.title}</h3>
-                                            <p className="text-sm font-bold text-emerald-900/60">{role.sub}</p>
+                                            <p className="text-[12px] uppercase tracking-widest mb-4 text-emerald-600">{role.label}</p>
+                                            <h3 className="text-2xl font-bold leading-tight mb-2 tracking-tighter text-emerald-950">{role.title}</h3>
+                                            <p className="text-sm text-[#008d4c]">{role.sub}</p>
                                         </div>
-                                        <div className="mt-10 h-1.5 w-12 mx-auto lg:mx-0 rounded-full bg-emerald-200 group-hover:bg-emerald-500 transition-all"></div>
+
                                     </div>
                                 ))}
                             </div>
@@ -265,12 +269,12 @@ export default function Portfolio() {
                             { year: "সালঃ ২০১৮", title: "এমপি পদপ্রার্থী", loc: "বগুড়া-০৫ (শেরপুর-ধুনট)", desc: "জাতীয় সংসদ নির্বাচনে ইসলামী আন্দোলন বাংলাদেশ মনোনীত প্রার্থী হিসেবে অংশগ্রহণ।" },
                             { year: "২০২৬", title: "এমপি পদপ্রার্থী", loc: "বগুড়া-০৫ (হাতপাখা)", desc: "পীর সাহেব চরমোনাই মনোনীত সংসদ সদস্য পদপ্রার্থী হিসেবে লড়াইয়ে প্রস্তুত।" },
                         ].map((p, i) => (
-                            <div key={i} className="relative p-10 bg-white shadow-lg rounded-2xl group transition-all hover:-translate-y-2 flex flex-col items-center text-center border border-emerald-50">
+                            <div key={i} className="relative p-10 bg-white shadow-lg rounded-lg group transition-all hover:-translate-y-2 flex flex-col items-center text-center border border-emerald-50">
                                 <div className="text-7xl font-black text-emerald-100/40 absolute top-2 right-2">০{i + 1}</div>
-                                <p className="text-[10px] font-black text-emerald-700 uppercase  mb-6 relative z-10">{p.year}</p>
+                                <p className="text-[14px] text-[#008d4c]  uppercase  mb-6 relative z-10">{p.year}</p>
                                 <h4 className="text-xl font-black text-emerald-950 mb-2 relative z-10">{p.title}</h4>
-                                <p className="text-xs font-extrabold text-emerald-800/60 mb-4 relative z-10">{p.loc}</p>
-                                <p className="text-xs font-bold text-emerald-900/70 leading-relaxed relative z-10">{p.desc}</p>
+                                <p className="text-xs text-black  mb-4 relative z-10">{p.loc}</p>
+                                <p className="text-xs text-[#008d4c]  leading-relaxed relative z-10">{p.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -278,7 +282,7 @@ export default function Portfolio() {
             </section>
 
             {/* Social Work Section */}
-            <section className="py-24 bg-emerald-950 relative overflow-hidden">
+            <section id="social-work" className="py-24 bg-emerald-950 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center">
                     <img src="/h1.png" alt="watermark" className="w-[1000px]" />
                 </div>
@@ -298,9 +302,9 @@ export default function Portfolio() {
                             { title: "গরিব দুঃখী মানুষের সেবা", icon: <Heart className="h-8 w-8" /> },
                             { title: "সামাজিক উন্নয়ন", icon: <Users className="h-8 w-8" /> },
                         ].map((s, i) => (
-                            <div key={i} className="p-10 bg-white border border-emerald-100 rounded-2xl transition-all group relative overflow-hidden text-center flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1">
-                                <div className="text-emerald-600 mb-6 font-black transition-colors">{s.icon}</div>
-                                <h4 className="font-black text-xs md:text-sm uppercase tracking-widest text-emerald-900 transition-colors uppercase">{s.title}</h4>
+                            <div key={i} className="p-10 bg-white border border-emerald-100 rounded-lg transition-all group relative overflow-hidden text-center flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1">
+                                <div className="text-[#008d4c] mb-6 transition-colors">{s.icon}</div>
+                                <h4 className=" text-xs md:text-sm uppercase text-emerald-900 transition-colors uppercase">{s.title}</h4>
                             </div>
                         ))}
                     </div>
@@ -330,12 +334,16 @@ export default function Portfolio() {
                             </a>
                         </Button>
                         <div className="flex gap-4">
-                            <Button variant="outline" className="border-white/40  transition-all rounded-lg h-11 w-11 p-0">
-                                <Facebook className="h-4 w-4" />
+                            <Button asChild variant="outline" className="border-white/40  transition-all rounded-lg h-11 w-11 p-0">
+                                <a href="https://www.facebook.com/mr92mahmud" target="_blank" rel="noopener noreferrer">
+                                    <Facebook className="h-4 w-4" />
+                                </a>
                             </Button>
-                            <Button variant="outline" className="border-white/40  transition-all rounded-lg h-11 w-11 p-0">
-                                <Twitter className="h-4 w-4" />
-                            </Button>
+                            {/* <Button asChild variant="outline" className="border-white/40  transition-all rounded-lg h-11 w-11 p-0">
+                                <a href="https://twitter.com/mr92mahmud" target="_blank" rel="noopener noreferrer">
+                                    <Twitter className="h-4 w-4" />
+                                </a>
+                            </Button> */}
                         </div>
                     </div>
                 </div>
@@ -357,11 +365,12 @@ export default function Portfolio() {
                         <div className="space-y-6">
                             <h4 className="text-sm  uppercase  text-emerald-400">লিংক সমূহ</h4>
                             <div className="grid grid-cols-2 gap-4">
-                                {['হোম', 'পরিচিতি', 'শিক্ষাগত যোগ্যতা', 'রাজনৈতিক সফর', 'সমাজসেবা', 'যোগাযোগ'].map((link) => (
-                                    <a key={link} href="#" className="text-sm  uppercase text-white hover:text-white transition-colors">
-                                        {link}
-                                    </a>
-                                ))}
+                                <a href="#home" className="text-sm  uppercase text-white hover:text-emerald-400 transition-colors">হোম</a>
+                                <a href="#about" className="text-sm  uppercase text-white hover:text-emerald-400 transition-colors">পরিচিতি</a>
+
+                                <a href="#journey" className="text-sm  uppercase text-white hover:text-emerald-400 transition-colors">রাজনৈতিক পথচলা</a>
+                                <a href="#social-work" className="text-sm  uppercase text-white hover:text-emerald-400 transition-colors">সমাজসেবা</a>
+                                <a href="https://wa.me/8801718329508" target="_blank" rel="noopener noreferrer" className="text-sm  uppercase text-white hover:text-emerald-400 transition-colors">যোগাযোগ</a>
                             </div>
                         </div>
                         <div className="space-y-6">
