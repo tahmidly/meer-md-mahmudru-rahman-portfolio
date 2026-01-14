@@ -4,6 +4,11 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button"
 import { ShieldCheck, Phone, ChevronRight, MapPin, Star, GraduationCap, BookOpen, Heart, Briefcase, Users, History, Globe, Award, CheckCircle2, Facebook, Twitter, Menu, X, Mail, FileText } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import profile from "../public/abbu.png";
+import h1 from "../public/h1.png";
+import h2 from "../public/h2.png";
+import h3 from "../public/h3.png";
 
 export default function Portfolio() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -119,16 +124,18 @@ export default function Portfolio() {
                         {/* Image Side */}
                         <div className="lg:w-[500px] mb-20 relative flex items-center justify-center min-h-[500px]">
                             <div className="absolute inset-0 bg-emerald-50 -rotate-3 rounded-3xl"></div>
-                            <div className="relative w-full h-full bg-slate-200 overflow-hidden shadow-2xl transition-all duration-700 rounded-3xl">
+                            <div className="relative w-full h-[600px] bg-slate-200 overflow-hidden shadow-2xl transition-all duration-700 rounded-3xl">
 
-                                <img
-                                    src="https://i.ibb.co.com/N20pvNRK/Chunnu-Picture.png"
+                                <Image
+                                    src={profile}
                                     alt="MP Candidate"
-                                    className="w-full h-full object-cover transition-all duration-700"
+                                    className="object-cover transition-all duration-700"
+                                    fill
+                                    placeholder="blur"
                                 />
                             </div>
                             <div className="absolute -bottom-8 -left-8 w-40 h-40 backdrop-blur-md p-6 bg-[#008c4f]/20 transition-all  rounded-2xl -rotate-6 hover:-rotate-0 hidden md:flex items-center justify-center">
-                                <img src="/h1.png" alt="হাতপাখা" className="w-full h-full object-contain " />
+                                <Image src={h1} alt="হাতপাখা" className="object-contain p-6" fill />
                             </div>
                         </div>
                     </div>
@@ -140,7 +147,7 @@ export default function Portfolio() {
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { label: "প্রতীক", val: <img src="/h2.png" alt="হাতপাখা" className="h-20 w-auto object-contain" />, sub: "শেরপুর-ধুনট" },
+                            { label: "প্রতীক", val: <Image src={h2} alt="হাতপাখা" className="h-20 w-auto object-contain" />, sub: "শেরপুর-ধুনট" },
                             { label: "দল", val: "IAB", sub: "ইসলামী আন্দোলন বাংলাদেশ" },
                             { label: "দলে যোগদান", val: "২০১০", sub: "সাল" },
                             { label: "শিক্ষা", val: "এম.কম", sub: "ব্যাবস্থাপনা" },
@@ -158,7 +165,7 @@ export default function Portfolio() {
             {/* About & Education Section */}
             <section id="about" className="py-24 bg-white relative overflow-hidden">
                 <div className="absolute -right-20 top-20 opacity-[0.03] pointer-events-none transform rotate-12">
-                    <img src="/h2.png" alt="watermark" className="w-[600px]" />
+                    <Image src={h2} alt="watermark" className="w-[600px] h-auto" />
                 </div>
                 <div className="container mx-auto px-4 max-w-6xl relative z-10">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch ">
@@ -169,10 +176,7 @@ export default function Portfolio() {
                                     className="text-5xl font-black text-emerald-950 uppercase mb-8 flex flex-col lg:flex-row items-center lg:items-center gap-6 text-center lg:text-left">আমার পরিচয়</h2>
 
                                 <p className="text-sm text-emerald-900/80 leading-relaxed text-center lg:text-justify">
-                                    আসন্ন ত্রয়োদশ জাতীয় সংসদ নির্বাচনে বগুড়া-০৫ (শেরপুর-ধুনট) আসনে ইসলামী আন্দোলন বাংলাদেশ-এর আমীর, পীর সাহেব চরমোনাই মনোনীত সংসদ সদস্য পদপ্রার্থী জননেতা প্রভাষক মীর মাহমুদুর রহমান চুন্নু ।
-                                    সংক্ষিপ্ত পরিচয়: বগুড়া জেলার শেরপুর উপজেলার ভবানীপুর ইউনিয়নের চন্ডিপুর গ্রামে সম্ভ্রান্ত মুসলিম পরিবারে জন্ম পিতাঃ মৃত মোঃ মোসলেম উদ্দিন মীর, মাতাঃ মৃত মাহেলা বেগম, আট ভাইবোনের মধ্যে কনিষ্ঠ শিক্ষাজীবন: SSC: ছোনকা দ্বিমুখী উচ্চ বিদ্যালয় HSC: শেরপুর সরকারি কলেজ উচ্চতর ডিগ্রি লাভঃ সরকারি আজিজুল হক বিশ্ববিদ্যালয় কলেজ। কলেজ জীবনে শেরপুর কলেজে ১৯৯৫ সালে বিএনপির ছাত্রদল কতৃক হামলার শিকার। এছাড়াও
-                                    ফ্যাসিবাদী শাসনামলে অন্যায়, অত্যাচার, গুম ও খুনের বিরুদ্ধে কথা বলতে গিয়ে আওয়ামী সরকারের হাতে কারাবরণ ও নির্যাতনের শিকার ২০১৩ সালে । ২০২৪ সালের জুলাই গণঅভ্যুত্থানে ছাত্র-জনতার সাথে থেকে আন্দোলন সংগ্রাম করি ।
-                                    পেশাজীবন: ছোনকা রহিমা নওশের আলী অনার্স কলেজের ম্যানেজমেন্ট বিভাগে প্রভাষক পদে কর্মরত।
+                                    জননেতা মীর মাহমুদুর রহমান চুন্নু, বগুড়া জেলার শেরপুর উপজেলার ভবানীপুর ইউনিয়নের চন্ডিপুর গ্রামে সম্ভ্রান্ত মুসলিম পরিবারে জন্ম। পিতাঃ মৃত আলহাজ্ব মোসলেম উদ্দিন মীর, মাতাঃ মৃত মাহেলা বেগম, আট ভাইবোনের মধ্যে আমি কনিষ্ঠ। শিক্ষাজীবন: SSC- ছোনকা দ্বিমুখী উচ্চ বিদ্যালয়, HSC- শেরপুর সরকারি কলেজ, উচ্চতর ডিগ্রি লাভ: সরকারি আজিজুল হক বিশ্ববিদ্যালয় কলেজ, বগুড়া। প্রভাষক - ব্যবস্থাপনা বিভাগ,  রহিমা-নওশের আলী অনার্স কলেজ, ছোনকা, শেরপুর, বগুড়া। আমি 2026 সালে অনুষ্ঠিতব্য 12 ফেব্রুয়ারী ত্রয়োদশ জাতীয় সংসদ নির্বাচনে বগুড়া-০৫ (শেরপুর-ধুনট) নির্বাচনী এলাকার সংসদ সদস্য পদপ্রার্থী।  সহ-সভাপতি, ইসলামী আন্দোলন বাংলাদেশ, বগুড়া জেলা শাখা ও সেক্রেটারী, শেরপুর উপজেলা শাখা, বগুড়া। সাংগঠনিক সম্পাদক, জাতীয় শিক্ষক ফোরাম, রাজশাহী বিভাগ। প্রতিষ্ঠাতা ও পরিচালক, আইএবি মারকাজ (আর্ত মানবতার কল্যাণে সামাজিক সংগঠন), শেরপুর, বগুড়া। সদস্য, চেম্বার অব কমার্স , বগুড়া। আমি ফ্যাসিবাদী শাসনামলে অন্যায়, অত্যাচার, গুম ও খুনের বিরুদ্ধে কথা বলতে গিয়ে আওয়ামী সরকারের সময় ২০১৩ সালে  কারাবরণ ও নির্যাতনের শিকার হই। ২০২৪ এর জুলাই বিপ্লবে ও গণঅভ্যুত্থানে ছাত্র-জনতার সাথে থেকে আন্দোলন সংগ্রাম করেন। আমি একজন বিশিষ্ট রাজনীতিবিদ, শিক্ষাবিদ ও সমাজসেবক।
                                 </p>
                             </div>
 
@@ -253,7 +257,7 @@ export default function Portfolio() {
             {/* Political Journey Section */}
             <section id="journey" className="py-32 bg-slate-50 relative overflow-hidden scroll-mt-24">
                 <div className="absolute -left-20 top-20 opacity-[0.03] pointer-events-none transform rotate-12">
-                    <img src="/h2.png" alt="watermark" className="w-[600px]" />
+                    <Image src={h2} alt="watermark" className="w-[600px] h-auto" />
                 </div>
                 <div className="container mx-auto px-4 max-w-6xl relative z-10">
                     <div className="text-center mb-24 space-y-4">
@@ -284,7 +288,7 @@ export default function Portfolio() {
             {/* Social Work Section */}
             <section id="social-work" className="py-24 bg-emerald-950 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center">
-                    <img src="/h1.png" alt="watermark" className="w-[1000px]" />
+                    <Image src={h1} alt="watermark" className="w-[1000px] h-auto" />
                 </div>
                 <div className="container mx-auto px-4 max-w-6xl relative z-10">
                     <div className="text-center mb-20 space-y-4">
@@ -318,7 +322,7 @@ export default function Portfolio() {
                 </div>
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <div className="mb-10 inline-block p-8 rounded-3xl">
-                        <img src="/h3.png" alt="Campaign Logo" className="h-36 w-auto object-contain" />
+                        <Image src={h3} alt="Campaign Logo" className="h-36 w-auto object-contain" />
                     </div>
                     <p className="text-xl text-white mb-12 font-bold ">"ইসলাম, দেশ ও মানবতার কল্যাণে <br /> সাম্য,  মানবিক মর্যাদা ও সামাজিক ন্যায় বিচার প্রতিষ্ঠায়"</p>
                     <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight">
